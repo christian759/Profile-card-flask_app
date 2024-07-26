@@ -1,0 +1,113 @@
+{% extends 'base.html'%}
+{%block title%}
+<title> Home Page</title>
+
+{%endblock%}
+
+{% block content %}
+<style>
+    body {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Soft gradient background */
+            font-family: 'Poppins', sans-serif;
+            color: #333; /* Dark text color for readability */
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+    .container-custom {
+        background-color: #2c2c2c; /* Dark gray background for the container */
+        color: #e0e0e0; /* Light text color */
+        padding: 4rem 3rem; /* Generous padding */
+        border-radius: 1.5rem; /* Rounded corners */
+        max-width: 900px; /* Set a maximum width for the container */
+        margin: 6rem auto; /* Center the container and add space from top */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+        border: 1px solid #444; /* Light border for definition */
+    }
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 3.5rem; /* Larger font size */
+        font-weight: 700; /* Bold text */
+        color: #ffffff; /* Pure white text */
+        margin-bottom: 2.5rem; /* Space below heading */
+        text-align: center; /* Center the heading */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better readability */
+    }
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.5rem; /* Adjusted font size */
+        font-weight: 600; /* Semi-bold text */
+        color: #f5f5f5; /* Very light gray text */
+        margin-bottom: 2rem; /* Spacing below heading */
+        border-bottom: 2px solid #ff6f61; /* Bottom border for emphasis */
+        padding-bottom: 0.75rem; /* Padding below heading */
+    }
+    h3 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem; /* Adjusted font size */
+        font-weight: 600; /* Semi-bold text */
+        color: #d1d1d1; /* Light gray text */
+        margin-bottom: 1.5rem; /* Spacing below heading */
+    }
+    p, li {
+        font-size: 1.25rem; /* Slightly larger text size */
+        line-height: 1.8; /* Improved line height for readability */
+        margin-bottom: 2rem; /* Space below paragraphs and list items */
+    }
+    a.btn-primary {
+        background-color: #ff6f61; /* Vibrant button color */
+        border-color: #ff6f61; /* Border color to match button */
+        font-weight: 600; /* Slightly bold text */
+        text-transform: uppercase; /* Uppercase text */
+        padding: 0.75rem 2rem; /* Padding for button */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth color transition and slight scaling */
+        border-radius: 0.75rem; /* Rounded corners for button */
+    }
+    a.btn-primary:hover {
+        background-color: #e64a4a; /* Darker shade on hover */
+        border-color: #e64a4a; /* Darker border shade on hover */
+        transform: scale(1.05); /* Slightly scale up on hover */
+    }
+    footer {
+        font-size: 1rem; /* Slightly larger footer text */
+        background-color: #343a40; /* Dark footer background */
+        color: #e0e0e0; /* Light text color for footer */
+        padding: 2rem; /* Padding around footer content */
+        border-radius: 0 0 1.5rem 1.5rem; /* Rounded bottom corners */
+        text-align: center; /* Center the footer text */
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+</style>
+<div class="container container-custom">
+    <header class="mb-5">
+        <h1>Welcome to ProfileCard Creator!</h1>
+        <p class="lead">Create Your Personalized Profile Card in Minutes</p>
+    </header>
+    <div class="content">
+        <p>At ProfileCard Creator, we make it easy for you to create and share beautiful, personalized profile cards. Just enter your information, and we'll do the rest!</p>
+        <h2>How It Works:</h2>
+        <ol class="list-unstyled">
+            <li><strong>Enter Your Information:</strong> Fill out our simple form with your name, age, gender, email, location, a brief about yourself, and even upload your favorite photo.</li>
+            <li><strong>Generate Your Profile Card:</strong> With a click of a button, we generate a sleek and professional profile card that showcases your information beautifully.</li>
+            <li><strong>Share Your Unique URL:</strong> Each profile card comes with a unique URL that you can share with friends, family, or colleagues. It's a great way to introduce yourself or present your personal brand.</li>
+        </ol>
+        <h2>Why Use ProfileCard Creator?</h2>
+        <ul class="list-unstyled">
+            <li><strong>User-Friendly:</strong> Our interface is designed to be intuitive and straightforward. No technical skills required!</li>
+            <li><strong>Customizable:</strong> Add your personal touch with a photo and a detailed description about yourself.</li>
+            <li><strong>Shareable:</strong> Instantly share your profile card with a unique URL that’s easy to remember and distribute.</li>
+        </ul>
+        <h2>Get Started Now!</h2>
+        <p>Ready to create your profile card? Click the button below to begin. It's quick, easy, and completely free!</p>
+        <div class="text-center mb-4">
+            <a href="/form" class="btn btn-primary">Create Your Profile Card Now</a>
+        </div>
+        <p>Let us help you make a great first impression. Whether it's for professional networking, social connections, or just for fun, ProfileCard Creator is here for you.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 ProfileCard Creator. All rights reserved.</p>
+    </footer>
+</div>
+
+{% endblock %}

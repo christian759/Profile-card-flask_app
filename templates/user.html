@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>User Profile</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+        padding-top: 60px;
+    }
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(to top right, #ffffff, #e0e0e0);
+    }
+    .card-header {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.75rem;
+        font-weight: bold;
+        border-bottom: 2px solid #0056b3;
+    }
+    .card-body {
+        padding: 2rem;
+        background-color: #ffffff;
+    }
+    .card-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #333;
+    }
+    .profile-picture {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #007bff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 1.5rem;
+    }
+    .list-group-item {
+        border: none;
+        padding: 15px 20px;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .list-group-item:last-child {
+        border-bottom: none;
+    }
+    .list-group-item-label {
+        font-weight: 600;
+        color: #007bff;
+    }
+    .list-group-item-value {
+        color: #555;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+    .error-message {
+        color: #dc3545;
+        margin-top: 10px;
+    }
+    /* Add some spacing between elements for better readability */
+    .list-group-item {
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    Profile Card
+                </div>
+                <div class="card-body text-center">
+                    <img src="{{ url_for('static', filename='uploads/' + user.Photo) }}" alt="User Photo" class="profile-picture">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="list-group-item-label">Name:</span>
+                            <span class="list-group-item-value">{{ user.UserName }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="list-group-item-label">Age:</span>
+                            <span class="list-group-item-value">{{ user.Age }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="list-group-item-label">Email:</span>
+                            <span class="list-group-item-value">{{ user.Email }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="list-group-item-label">About:</span>
+                            <span class="list-group-item-value">{{ user.About }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="list-group-item-label">Gender:</span>
+                            <span class="list-group-item-value">{{ user.Gender }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="list-group-item-label">Location:</span>
+                            <span class="list-group-item-value">{{ user.Location }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
