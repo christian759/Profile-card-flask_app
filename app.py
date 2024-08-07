@@ -5,7 +5,7 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
-app.config['SECRET_KEY'] = '2140739873ID'
+app.config['SECRET_KEY'] = '************'
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
 model.db.init_app(app)
