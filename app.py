@@ -23,12 +23,9 @@ def home_page():
 def form_page():
     error = None
     if request.method == "POST":
-        #print("Got here 7")
         photo = request.files.get('photo')
         photo_filename = None
-        #print("Got here 3")
         if photo and photo.filename != '':
-         #   print(photo_filename)
             photo_filename = secure_filename(photo.filename)
             photo.save(os.path.join(app.config['UPLOAD_FOLDER'], photo_filename))
 
@@ -43,9 +40,7 @@ def form_page():
         )
         try:
             model.db.session.add(person)
-          #  print("Got here 4")
             model.db.session.commit()
-           # print("Got here 5")
         except:
             error = "Username has already been used"
             
@@ -57,7 +52,6 @@ def form_page():
 @app.route("/person/<username>")
 def person(username):
     user = model.Person.query.filter_by(UserName=username).first_or_404()
-   # print("Got here 6")
     return render_template("user.html", user=user)
 
 
