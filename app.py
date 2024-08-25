@@ -1,7 +1,6 @@
 from flask import Flask, redirect, request, url_for, render_template
 import model
 import os
-from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
